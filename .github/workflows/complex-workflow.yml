@@ -11,10 +11,19 @@ jobs:
   job2:
     name : Second job
     runs-on : windows-latest
+    steps:
+      - name : Print Date
+        run : date
   job3:
     name : Third job
-    runs-on : macos-latest   
+    runs-on : macos-latest
+    steps:
+      - name : Print Date
+        run : echo "date"    
   job4:
     needs: [job1, job2, job3]
     name : Fourth job
-    runs-on : windows-2025 
+    runs-on : windows-2025
+    steps:
+      - name : Print Date
+        run : echo "date"    
