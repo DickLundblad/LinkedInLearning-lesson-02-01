@@ -5,7 +5,9 @@ jobs:
   job1:
     name : First job
     runs-on : ubuntu-latest
-    run :  echo 'date'
+    steps:
+      - name : Print Date
+        run : echo "date"
   job2:
     name : Second job
     runs-on : windows-latest
